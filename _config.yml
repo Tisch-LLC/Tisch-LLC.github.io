@@ -6,6 +6,11 @@ exclude:
   - LICENSE.txt
   - README.md
   - vendor
+  - css
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - node_modules
 
 markdown: kramdown
 permalink: /project/:name

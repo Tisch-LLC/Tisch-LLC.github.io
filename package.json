@@ -1,0 +1,36 @@
+{
+  "name": "tisch-llc.github.io",
+  "version": "1.0.0",
+  "description": "With Jekyll and Github Pages",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "algolia": "bundle exec jekyll algolia",
+    "css:build": "gulp build",
+    "watch": "gulp watch",
+    "images": "gulp images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tisch-LLC/tisch-llc.github.io"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tisch-LLC/tisch-llc.github.io/issues"
+  },
+  "homepage": "https://www.tisch.llc",
+  "devDependencies": {
+    "bulma": "^0.8.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-purgecss": "^2.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "npm": "^6.4.0"
+  },
+  "dependencies": {}
+}
