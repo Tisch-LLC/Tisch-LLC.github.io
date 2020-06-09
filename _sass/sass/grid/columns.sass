@@ -464,6 +464,12 @@ $column-gap: 0.75rem !default
     &.is-desktop
       display: flex
 
++mobile
+  // to fix 'too wide' bug on mobile
+  .columns
+    margin-left: 0
+    margin-right: 0
+
 @if $variable-columns
   .columns.is-variable
     --columnGap: 0.75rem
