@@ -23,3 +23,5 @@ url: https://www.tisch.llc
 plugins:
   - jekyll-sitemap
   - kramdown
+
+google_auto_adsense: ca-pub-2355534368422626
