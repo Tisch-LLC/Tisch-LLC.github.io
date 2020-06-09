@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/feed.xml" />
+
+  <link rel="canonical" href="{{ site.github.url }}{{ page.url }}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="{{ site.github.url }}/images/logo.jpg" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:image" content="{{ site.github.url }}/images/logo.jpg" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="{{ site.github.url }}{{ page.url }}" />
+
+  <script type="application/ld+json">
+    {% if page.title %}
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ site.github.url }}{{ page.url }}"
+        },
+        "headline": "{{ page.title }}",
+        "image": [
+          "{{ site.github.url }}/images/logo.jpg"
+        ],
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.author }}"
+        },
+        "description": "{{ page.desc }}",
+        "url": "{{ site.url }}{{ page.url }}"
+      }
+    {% else %}
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "image": [
+          "{{ site.github.url }}/images/logo.jpg"
+        ],
+        "url": "{{ site.url }}",
+        "description": "{{ site.description }}"
+      }
+    {% endif %}
+  </script>
+
+  {% if site.google_analytics %}
+    <script async custom-element="amp-analytics"
+      src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  {% endif %}
+
+  {% if site.google_auto_adsense %}
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  {% endif %}
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    {% capture include_to_scssify %}
+      {% include styles.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
+</head>

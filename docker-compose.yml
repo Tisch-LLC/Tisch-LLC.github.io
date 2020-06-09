@@ -1,0 +1,15 @@
+version: "3"
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: ./docker/jekyll/Dockerfile
+    command: bundle exec jekyll serve --force_polling --host 0.0.0.0 --incremental -P 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - bundle:/bundle
+volumes:
+  bundle:
+    driver: local
