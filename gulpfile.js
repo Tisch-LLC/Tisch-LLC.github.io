@@ -26,7 +26,7 @@ function purificationDefault() {
         content: [
           "_includes/*.html",
           "_layouts/default.html",
-          "index.html",
+          "./index.html",
           "_data/about/*.yml",
         ],
       })
@@ -56,6 +56,7 @@ function watch() {
       "_includes/**.html",
       "_sass/*",
       "assets/css/*",
+      "./index.html",
     ],
     build
   );
