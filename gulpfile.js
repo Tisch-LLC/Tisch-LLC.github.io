@@ -8,7 +8,7 @@ var rename = require("gulp-rename");
 
 var paths = {
   styles: {
-    src: "_sass/main.scss",
+    src: ["./_sass/main.scss", "./node_modules/bulma/bulma.sass"],
     tmp: "assets/css/dist",
     dest: "_includes",
   },
