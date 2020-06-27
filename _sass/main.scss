@@ -1,47 +1,18 @@
-#sectioncontainer {
-  margin-top: 20px;
+a,
+p,
+h1,
+h2,
+h3 {
+  font-family: "Sawarabi Gothic";
 }
 
-.board-item {
-  margin: 5px 0;
-  will-change: transform;
-}
-
-.board-item-content {
-  word-break: break-all;
-  position: relative;
-  padding: 20px;
-  background: #fff;
-  border-radius: 4px;
-  font-size: 17px;
-  text-align: center;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
-  margin: 5px;
-}
-
-.delete {
-  pointer-events: auto;
-}
-
-footer {
-  margin-top: 2rem;
-}
-
-.wf-mplus1p {
-  font-family: "M PLUS 1p";
-  font-weight: bold;
+p {
+  font-size: 1.1rem;
 }
 
 .va {
   display: flex;
   align-items: center;
-}
-
-html {
-  font-family: "Nunito Sans", sans-serif;
-  color: white;
 }
 
 a {
