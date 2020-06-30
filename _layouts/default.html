@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html ⚡ lang={{ site.language }}>
+<html ⚡ lang="{{ site.language }}">
   {% include head.html %}
   <body>
+    <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+      <h3 class="title-menus ml-2 mr-1">
+        Menus
+        <a href="javascript:void(0);" class="menus-close-button" on="tap:sidebar.close">
+          <i class="fa fa-times icon icon-small" aria-hidden="true"></i>
+        </a>
+    </h3>
+      <a class="navbar-item" href="/">
+        Home
+      </a>
+      <a class="navbar-item" href="/mission">
+        Mission
+      </a>
+      <a class="navbar-item" href="/services">
+        Services
+      </a>
+      <a class="navbar-item" href="/about">
+        About
+      </a>
+    </amp-sidebar>
     {% if site.google_auto_adsense %}
-      <amp-auto-ads type="adsense"
-                  data-ad-client="{{ site.google_auto_adsense }}">
-      </amp-auto-ads>
-    {% endif %}
-    {% if site.google_analytics %}
-      <amp-analytics type="googleanalytics" id="analytics1">
-        <script type="application/json">
-          {
-            "vars": {
-              "account": "{{ site.google_analytics }}"
-            },
-            "triggers": {
-              "trackPageview": {
-                "on": "visible",
-                "request": "pageview"
-              }
+    <amp-auto-ads
+      type="adsense"
+      data-ad-client="{{ site.google_auto_adsense }}"
+    >
+    </amp-auto-ads>
+    {% endif %} {% if site.google_analytics %}
+    <amp-analytics type="googleanalytics" id="analytics1">
+      <script type="application/json">
+        {
+          "vars": {
+            "account": "{{ site.google_analytics }}"
+          },
+          "triggers": {
+            "trackPageview": {
+              "on": "visible",
+              "request": "pageview"
             }
           }
-        </script>
-      </amp-analytics>
-    {% endif %}
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+        }
+      </script>
+    </amp-analytics>
+    {% endif %} {% include header.html %} {{ content }} {% include footer.html %}
   </body>
 </html>

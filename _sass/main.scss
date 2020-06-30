@@ -17,23 +17,24 @@ p {
 
 a {
   .icon {
-    color: #3b7adf;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #24272c;
 
-    &:hover {
-      text-decoration: underline;
-      color: #3b7adf;
+    &.icon-small {
+      font-size: 1.2rem;
     }
+  }
+}
+
+button {
+  .icon {
+    font-size: 1.8rem;
+    color: #24272c;
   }
 }
 
 .navbar .navbar-item {
   color: #24272c;
-
-  &.is-active {
-    color: #24272c;
-    font-weight: 700;
-  }
 
   &:hover {
     background: transparent;
@@ -60,4 +61,20 @@ a {
   float: right;
   font-size: 2rem;
   margin-right: 1.2rem;
+}
+
+.sp-menus-button {
+  float: left;
+}
+
+.title-menus {
+  font-size: 1.2rem;
+  font-weight: bold;
+  .menus-close-button {
+    text-decoration: none;
+
+    i {
+      color: #24272c;
+    }
+  }
 }
