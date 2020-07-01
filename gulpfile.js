@@ -25,8 +25,8 @@ function purificationDefault() {
       purgecss({
         content: [
           "_includes/*.html",
-          "_layouts/default.html",
-          "./index.html",
+          "_layouts/*.html",
+          "./*.html",
           "_data/about/*.yml",
         ],
       })

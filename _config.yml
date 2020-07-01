@@ -13,7 +13,7 @@ exclude:
   - node_modules
 
 markdown: kramdown
-permalink: /project/:name
+permalink: /posts/:name
 
 sass:
   sass_dir: css

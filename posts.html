@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="columns">
+  <div class="column is-10 is-offset-1">
+    <div class="columns featured-post is-multiline">
+      <div class="column is-12 post">
+        <article class="columns featured">
+          <div class="column is-6 featured-content va">
+            <div>
+              <h2 class="post-title">ニュース・プレスリリース</h2>
+              <ul>
+                {% for post in site.posts %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="column is-6 post-img">
+            <amp-img
+              src="/images/news.png"
+              alt="新聞を読む女性"
+              width="1000"
+              height="912"
+              layout="responsive"
+            >
+            </amp-img>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

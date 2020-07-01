@@ -8,7 +8,7 @@
         <a href="#" class="menus-close-button" on="tap:sidebar.close">
           <i class="fa fa-times icon icon-small" aria-hidden="true"></i>
         </a>
-    </h3>
+      </h3>
       <a class="navbar-item" href="/">
         Home
       </a>
@@ -47,6 +47,21 @@
         }
       </script>
     </amp-analytics>
-    {% endif %} {% include header.html %} {{ content }} {% include footer.html %}
+
+    {% endif %} {% include header.html %}
+
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content is-medium">
+          <h2 class="subtitle is-4">{{ page.date | date: "%Y年%m月%d日" }}</h2>
+          <h1 class="title">{{ page.title }}</h1>
+          <p>
+            {{ content }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
   </body>
 </html>
