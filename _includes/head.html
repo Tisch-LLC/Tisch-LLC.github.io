@@ -21,10 +21,35 @@
   <meta property="og:url" content="{{ site.github.url }}{{ page.url }}" />
 
   <script type="application/ld+json">
-    {% if page.title %}
+    {% if page.static %}
       {
         "@context": "http://schema.org",
-        "@type": "TechArticle",
+        "@type": "WebPage",
+        "headline": "{{ page.title }}",
+        "image": [
+          "{{ site.github.url }}/images/logo.jpg"
+        ],
+        "datePublished": "{{ page.published_at | date_to_xmlschema }}",
+        "dateModified": "{{ page.modified_at | date_to_xmlschema }}",
+        "author": {
+          "@type": "Organization",
+          "name": "{{ site.author }}"
+        },
+        "description": "{{ page.desc }}",
+        "url": "{{ site.url }}{{ page.url }}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.author }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.github.url }}/images/logo.jpg"
+          }
+        }
+      }
+    {% elsif page.title %}
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "{{ site.github.url }}{{ page.url }}"
@@ -33,13 +58,22 @@
         "image": [
           "{{ site.github.url }}/images/logo.jpg"
         ],
-        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "datePublished": "{{ page.published_at | date_to_xmlschema }}",
+        "dateModified": "{{ page.modified_at | date_to_xmlschema }}",
         "author": {
-          "@type": "Person",
+          "@type": "Organization",
           "name": "{{ site.author }}"
         },
         "description": "{{ page.desc }}",
-        "url": "{{ site.url }}{{ page.url }}"
+        "url": "{{ site.url }}{{ page.url }}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.author }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.github.url }}/images/logo.jpg"
+          }
+        }
       }
     {% else %}
       {

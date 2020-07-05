@@ -20,6 +20,7 @@ sass:
 timezone: Asia/Tokyo
 title: Tisch合同会社 ~AI × 不動産 で地域に新たな価値を創造~
 url: https://www.tisch.llc
+author: Tisch合同会社
 plugins:
   - jekyll-sitemap
   - kramdown
