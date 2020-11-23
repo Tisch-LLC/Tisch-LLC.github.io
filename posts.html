@@ -17,22 +17,14 @@ modified_at: 2020-06-15 13:00:00 +0900
               <ul>
                 {% for post in site.posts %}
                 <li>
-                  {{ post.date | date: "%Y年%m月%d日" }}<a href="{{ post.url }}"
-                    >{{ post.title }}</a
-                  >
+                  {{ post.date | date: "%Y年%m月%d日" }}<a href="{{ post.url }}">{{ post.title }}</a>
                 </li>
                 {% endfor %}
               </ul>
             </div>
           </div>
           <div class="column is-6 post-img">
-            <amp-img
-              src="/images/news.png"
-              alt="新聞を読む女性"
-              width="1000"
-              height="912"
-              layout="responsive"
-            >
+            <amp-img src="/images/news.png" alt="新聞を読む女性" width="1000" height="912" layout="responsive">
             </amp-img>
           </div>
         </article>

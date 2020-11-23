@@ -6,4 +6,4 @@ COPY \
   Gemfile \
   Gemfile.lock \
   /app/
-RUN bundle install --jobs=4 --path=/bundle
+RUN bundle install --jobs=4
